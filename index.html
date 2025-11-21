@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gamer Free Fire Effect - Enter Redirect</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1 class="title">WELCOME HERO TO Noss SnS</h1>
+        <p class="subtitle">Press <span class="key">enter</span> to go to website</p>
+
+        <button id="startBtn" class="btn">ENTER NOW</button>
+    </div>
+
+    <!-- Neon Particles -->
+    <div id="particles"></div>
+
+    <script>
+        // Redirect URL
+        let targetUrl = "https://hatch-shell-03937437.figma.site/";
+
+        const go = () => {
+            window.location.href = targetUrl;
+        };
+
+        // Enter key listener
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') go();
+        });
+
+        // Button click
+        document.getElementById('startBtn').addEventListener('click', go);
+    </script>
+
+</body>
+</html>
