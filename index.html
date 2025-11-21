@@ -12,18 +12,32 @@
         <h1 class="title">WELCOME HERO TO Noss SnS</h1>
         <p class="subtitle">Press <span class="key">enter</span> to go to website</p>
 
-        <button id="startBtn" class="btn">ENTER NOW</button>
+        <!-- Main Buttons -->
+        <button id="startBtn" class="btn">SnS</button>
+
+        <!-- NEW BUTTON: CLIPS -->
+        <button id="clipsBtn" class="btn" style="margin-top: 15px; background:#ff6600;">
+            CLIPS
+        </button>
+
     </div>
 
     <!-- Neon Particles -->
     <div id="particles"></div>
 
     <script>
-        // Redirect URL
+        // Redirect URL for ENTER button
         let targetUrl = "https://hatch-shell-03937437.figma.site/";
 
         const go = () => {
             window.location.href = targetUrl;
+        };
+
+        // Redirect URL for CLIPS button
+        const clipsUrl = "https://pollen-payer-29961223.figma.site/";
+
+        const goClips = () => {
+            window.location.href = clipsUrl;
         };
 
         // Enter key listener
@@ -31,8 +45,9 @@
             if (e.key === 'Enter') go();
         });
 
-        // Button click
+        // Button clicks
         document.getElementById('startBtn').addEventListener('click', go);
+        document.getElementById('clipsBtn').addEventListener('click', goClips);
     </script>
 
 </body>
